@@ -20,6 +20,9 @@ let context = `You are an expert motivational speaker, that gives wholesome, abs
 let apiKey = "e2b85d39ocbf2atcfebaabf3b2422057";
 let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+let generateMot = document.querySelector("#quotes");
+generateMot.style.display = "block";
+
 axios.get(apiUrl).then(displayQuotes);
 
 }
