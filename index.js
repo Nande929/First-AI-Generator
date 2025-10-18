@@ -21,8 +21,8 @@ let apiKey = "e2b85d39ocbf2atcfebaabf3b2422057";
 let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
 let generateMot = document.querySelector("#quotes");
-generateMot.style.display = "block";
-
+generateMot.classList.remove("hidden");
+generateMot.innerHTML = `<div class="blink">⏳Generating quote about ${userInput.value}...</div>`;
 axios.get(apiUrl).then(displayQuotes);
 
 }
